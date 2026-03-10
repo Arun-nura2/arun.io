@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arun | QA Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+}
+
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 10%;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:260px;
+border-radius:50%;
+border:5px solid #38bdf8;
+box-shadow:0 0 25px #38bdf8;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.typing{
+font-size:22px;
+color:#38bdf8;
+margin-top:10px;
+}
+
+/* SECTION */
+
+.container{
+padding:70px 10%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+color:#38bdf8;
+}
+
+/* GLASS CARD */
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:12px;
+backdrop-filter:blur(8px);
+margin-bottom:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* SKILLS */
+
+.skill{
+margin-bottom:18px;
+}
+
+.bar{
+height:10px;
+background:#1e293b;
+border-radius:10px;
+overflow:hidden;
+}
+
+.fill{
+height:10px;
+background:#38bdf8;
+width:0;
+animation:grow 2s forwards;
+}
+
+.manual{width:85%;}
+.selenium{width:70%;}
+.java{width:65%;}
+.sql{width:60%;}
+
+@keyframes grow{
+from{width:0}
+}
+
+/* PROJECTS */
+
+.project{
+padding:20px;
+background:#1e293b;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:scale(1.03);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:2px solid #38bdf8;
+padding-left:20px;
+}
+
+.timeline-item{
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+opacity:0.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Arun</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#timeline">Journey</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>Hello I'm <span>Arun</span></h1>
+
+<div class="typing">
+<span id="typing"></span>
+</div>
+
+<p style="margin-top:15px">
+QA Engineer passionate about Manual Testing and Automation.
+</p>
+
+</div>
+
+<img src="profile.jpg">
+
+</section>
+
+<div class="container">
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+Detail-oriented QA Engineer with strong foundation in Manual Testing and basic Automation Testing using Java and Selenium WebDriver.
+Experienced in testing E-Commerce applications and understanding of Software Testing Life Cycle (STLC).
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+
+<div class="skill">
+Manual Testing
+<div class="bar"><div class="fill manual"></div></div>
+</div>
+
+<div class="skill">
+Selenium
+<div class="bar"><div class="fill selenium"></div></div>
+</div>
+
+<div class="skill">
+Java
+<div class="bar"><div class="fill java"></div></div>
+</div>
+
+<div class="skill">
+SQL
+<div class="bar"><div class="fill sql"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project">
+
+<h3>E-Commerce Testing – Demoblaze</h3>
+
+<p>
+Performed manual testing for Login, Registration, Product Search, Cart and Checkout modules.
+Automated login and add-to-cart scenarios using Selenium WebDriver.
+</p>
+
+</div>
+
+</section>
+
+<!-- JOURNEY -->
+
+<section id="timeline">
+
+<h2 class="section-title">Journey</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h4>2025</h4>
+<p>B.E Mechanical Engineering – Government College of Engineering, Tirunelveli</p>
+</div>
+
+<div class="timeline-item">
+<h4>Internship</h4>
+<p>InternGlobeRadio Private Limited – Tirunelveli</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>Email: arunaan1206@gmail.com</p>
+<p>Phone: 9585797293</p>
+<p>LinkedIn: linkedin.com/in/arun--n</p>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+© 2026 Arun | Portfolio
+
+</footer>
+
+<script>
+
+const roles=[
+"QA Engineer",
+"Manual Testing Specialist",
+"Selenium Automation Learner"
+]
+
+let i=0
+let j=0
+let current=""
+let isDeleting=false
+
+function type(){
+
+current=roles[i]
+
+if(!isDeleting){
+document.getElementById("typing").textContent=current.substring(0,j++)
+if(j>current.length){
+isDeleting=true
+setTimeout(type,1200)
+return
+}
+}else{
+document.getElementById("typing").textContent=current.substring(0,j--)
+if(j<0){
+isDeleting=false
+i++
+if(i>=roles.length){i=0}
+}
+}
+
+setTimeout(type,100)
+}
+
+type()
+
+</script>
+
+</body>
+</html>
