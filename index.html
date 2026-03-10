@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,27 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a);
+background:#020617;
 color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLE BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#38bdf8 1px,transparent 1px);
+background-size:60px 60px;
+animation:moveBg 40s linear infinite;
+opacity:0.2;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0)}
+100%{transform:translate(-200px,-200px)}
 }
 
 /* NAVBAR */
@@ -29,10 +49,10 @@ nav{
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -47,7 +67,7 @@ text-decoration:none;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:80px 10%;
+padding:100px 10%;
 flex-wrap:wrap;
 }
 
@@ -55,11 +75,17 @@ flex-wrap:wrap;
 width:260px;
 border-radius:50%;
 border:5px solid #38bdf8;
-box-shadow:0 0 25px #38bdf8;
+box-shadow:0 0 40px #38bdf8;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
 }
 
 .hero h1{
-font-size:48px;
+font-size:50px;
 }
 
 .hero span{
@@ -68,18 +94,18 @@ color:#38bdf8;
 
 .typing{
 font-size:22px;
-color:#38bdf8;
 margin-top:10px;
+color:#38bdf8;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .container{
-padding:70px 10%;
+padding:80px 10%;
 }
 
 .section-title{
-font-size:32px;
+font-size:34px;
 margin-bottom:30px;
 color:#38bdf8;
 }
@@ -89,20 +115,21 @@ color:#38bdf8;
 .card{
 background:rgba(255,255,255,0.05);
 padding:25px;
-border-radius:12px;
-backdrop-filter:blur(8px);
-margin-bottom:20px;
+border-radius:14px;
+backdrop-filter:blur(10px);
+margin-bottom:25px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
 }
 
-/* SKILLS */
+/* SKILL BARS */
 
 .skill{
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
 .bar{
@@ -119,38 +146,40 @@ width:0;
 animation:grow 2s forwards;
 }
 
-.manual{width:85%;}
-.selenium{width:70%;}
-.java{width:65%;}
-.sql{width:60%;}
+.manual{width:90%}
+.selenium{width:70%}
+.java{width:65%}
+.sql{width:60%}
 
 @keyframes grow{
 from{width:0}
 }
 
-/* PROJECTS */
+/* PROJECT */
 
 .project{
-padding:20px;
 background:#1e293b;
+padding:20px;
 border-radius:10px;
 transition:0.3s;
 }
 
 .project:hover{
-transform:scale(1.03);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+transform:scale(1.05);
+box-shadow:0 10px 40px rgba(0,0,0,0.7);
 }
 
-/* TIMELINE */
+/* BUTTON */
 
-.timeline{
-border-left:2px solid #38bdf8;
-padding-left:20px;
-}
-
-.timeline-item{
-margin-bottom:20px;
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#38bdf8;
+border-radius:6px;
+color:black;
+font-weight:600;
+text-decoration:none;
 }
 
 /* FOOTER */
@@ -173,13 +202,9 @@ opacity:0.7;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#timeline">Journey</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -192,8 +217,10 @@ opacity:0.7;
 </div>
 
 <p style="margin-top:15px">
-QA Engineer passionate about Manual Testing and Automation.
+QA Engineer passionate about Manual Testing and Automation Testing.
 </p>
+
+<a class="btn" href="resume.pdf">Download Resume</a>
 
 </div>
 
@@ -203,8 +230,6 @@ QA Engineer passionate about Manual Testing and Automation.
 
 <div class="container">
 
-<!-- ABOUT -->
-
 <section id="about">
 
 <h2 class="section-title">About Me</h2>
@@ -212,15 +237,13 @@ QA Engineer passionate about Manual Testing and Automation.
 <div class="card">
 
 <p>
-Detail-oriented QA Engineer with strong foundation in Manual Testing and basic Automation Testing using Java and Selenium WebDriver.
-Experienced in testing E-Commerce applications and understanding of Software Testing Life Cycle (STLC).
+Detail-oriented QA Engineer with strong foundation in Manual Testing and Automation Testing using Selenium WebDriver and Java.
+Experienced in E-Commerce application testing and Software Testing Life Cycle (STLC).
 </p>
 
 </div>
 
 </section>
-
-<!-- SKILLS -->
 
 <section id="skills">
 
@@ -252,8 +275,6 @@ SQL
 
 </section>
 
-<!-- PROJECTS -->
-
 <section id="projects">
 
 <h2 class="section-title">Projects</h2>
@@ -263,37 +284,13 @@ SQL
 <h3>E-Commerce Testing – Demoblaze</h3>
 
 <p>
-Performed manual testing for Login, Registration, Product Search, Cart and Checkout modules.
-Automated login and add-to-cart scenarios using Selenium WebDriver.
+Performed manual testing for login, product search, cart and checkout modules.
+Automated login and cart flow using Selenium WebDriver.
 </p>
 
 </div>
 
 </section>
-
-<!-- JOURNEY -->
-
-<section id="timeline">
-
-<h2 class="section-title">Journey</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h4>2025</h4>
-<p>B.E Mechanical Engineering – Government College of Engineering, Tirunelveli</p>
-</div>
-
-<div class="timeline-item">
-<h4>Internship</h4>
-<p>InternGlobeRadio Private Limited – Tirunelveli</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -327,30 +324,31 @@ const roles=[
 
 let i=0
 let j=0
-let current=""
-let isDeleting=false
+let text=""
+let deleting=false
 
 function type(){
 
-current=roles[i]
+text=roles[i]
 
-if(!isDeleting){
-document.getElementById("typing").textContent=current.substring(0,j++)
-if(j>current.length){
-isDeleting=true
+if(!deleting){
+document.getElementById("typing").innerHTML=text.substring(0,j++)
+if(j>text.length){
+deleting=true
 setTimeout(type,1200)
 return
 }
 }else{
-document.getElementById("typing").textContent=current.substring(0,j--)
+document.getElementById("typing").innerHTML=text.substring(0,j--)
 if(j<0){
-isDeleting=false
+deleting=false
 i++
 if(i>=roles.length){i=0}
 }
 }
 
 setTimeout(type,100)
+
 }
 
 type()
